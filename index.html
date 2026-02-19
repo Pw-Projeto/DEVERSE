@@ -7,7 +7,38 @@
     <title>Deverse</title>
 </head>
 <body>
-    
-    <script src="./src/js/script.js"></script>
+
+<header id="cabecalho">
+<!-- LOGO -->
+    <div class="logo">
+        <button class="botao-logo" data-text="Deverse">
+            <span class="texto-botao-real">&nbsp;deverse&nbsp;</span>
+            <span aria-hidden="true" class="texto-botao-hover">&nbsp;deverse&nbsp;</span>
+        </button>
+    </div>
+<!-- FILTRO -->
+    <nav class="navbar">
+        <button id="btnfiltro" class="btn_filtro">Elementos</button>
+    </nav>
+    <!-- PAINEL OCULTO DO BOTAO DOS FILTROS -->
+    <div id="painelfiltro" class="painel_filtro">
+        <div class="painelcoluna1">
+            <button class="filtro ativo" data-filtro="all">All</button>
+            <button class="filtro" data-filtro="buttons">Buttons</button>
+            <button class="filtro" data-filtro="checkboxes">Checkboxes</button>
+            <button class="filtro" data-filtro="cards">Cards</button>
+        </div>
+        <div class="painelcoluna2">
+            <button class="filtro" data-filtro="loaders">Loaders</button>
+            <button class="filtro" data-filtro="forms">Forms</button>
+            <button class="filtro" data-filtro="radio">Radio Buttons</button>
+            <button class="filtro" data-filtro="inputs">Inputs</button>
+        </div>
+    </div>
+</header>
+
+
+
+<script src="./src/js/script.js"></script>
 </body>
 </html>
