@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #060706;
+}
+
+#cabecalho {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTAO FILTRO */
+.btn_filtro{
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    transition: 0.1s ease-in-out;
+}
+
+.btn_filtro:hover{
+    background: #242424;
+}
+/* PAINEL COM OS FILTROS */
+.painel_filtro{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 80px;
+    right: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    border: solid #333 3px;
+    pointer-events: none; /* NAO DEIXA SER CLICADO QUANDO DESATIVADO */
+    opacity: 0; /* DEIXA O PAINEL DESATIVADO */
+    transform: translateY(-10px);
+    transition: all 0.1s ease-in-out;
+}
+
+.painel_filtro.active {
+  opacity: 1; /* ATIVA O PAINEL */
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.painelcoluna1,
+.painelcoluna2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filtro {
+    margin: 3px;
+    padding: 10px 20px 10px 20px;
+    background: transparent;
+    width: 100%;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+.filtro:hover {
+    background: #333;
+}
+
+/* LOGO ANIMADA */
+.botao-logo {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37FF8B;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.texto-botao-hover {
+    position: absolute;
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: 6px solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.botao-logo:hover .texto-botao-hover {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+}
