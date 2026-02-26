@@ -16,7 +16,7 @@ body {
 }
 
 /* BOTAO FILTRO */
-.btn_filtro{
+.btn-filtro{
     background: transparent;
     border: none;
     color: #fff;
@@ -26,11 +26,11 @@ body {
     transition: 0.1s ease-in-out;
 }
 
-.btn_filtro:hover{
+.btn-filtro:hover{
     background: #242424;
 }
 /* PAINEL COM OS FILTROS */
-.painel_filtro{
+.painel-filtro{
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -40,13 +40,14 @@ body {
     padding: 5px;
     border-radius: 10px;
     border: solid #333 3px;
+    background: #0c0c0c;
     pointer-events: none; /* NAO DEIXA SER CLICADO QUANDO DESATIVADO */
     opacity: 0; /* DEIXA O PAINEL DESATIVADO */
     transform: translateY(-10px);
     transition: all 0.1s ease-in-out;
 }
 
-.painel_filtro.active {
+.painel-filtro.active {
   opacity: 1; /* ATIVA O PAINEL */
   transform: translateY(0);
   pointer-events: auto;
@@ -103,4 +104,28 @@ body {
 .botao-logo:hover .texto-botao-hover {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+.txt-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.txt-maior {
+    text-align: center;
+    font-size: 60px;
+    width: 820px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.txt-menor {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #9b9b9b;
+    width: 160px;
+    font-family: Arial, Helvetica, sans-serif;
 }
