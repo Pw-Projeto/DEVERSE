@@ -19,24 +19,26 @@
             </button>
         </div>
         <div class="nav-filtros">
-            <!-- FILTRO -->
-            <nav class="navbar">
-                <button id="btnfiltro" class="btn-filtro">Elementos</button>
-            </nav>
-            <!-- PAINEL OCULTO DO BOTAO DOS FILTROS -->
-            <div id="painelfiltro" class="painel-filtro">
-                <div class="painelcoluna1">
-                    <button class="filtro ativo" data-filtro="all">All</button>
-                    <button class="filtro" data-filtro="buttons">Buttons</button>
-                    <button class="filtro" data-filtro="checkboxes">Checkboxes</button>
-                    <button class="filtro" data-filtro="cards">Cards</button>
-                </div>
-                <div class="painelcoluna2">
-                    <button class="filtro" data-filtro="loaders">Loaders</button>
-                    <button class="filtro" data-filtro="forms">Forms</button>
-                    <button class="filtro" data-filtro="radio">Radio Buttons</button>
+            <div class="containerfilter">
+                <!-- FILTRO -->
+                <nav class="navbar">
+                    <button id="btnfiltro" class="btn-filtro">Elementos</button>
+                </nav>
+                <!-- PAINEL OCULTO DO BOTAO DOS FILTROS -->
+                <div id="painelfiltro" class="painel-filtro">
+                    <div class="painelcoluna1">
+                        <button class="filtro ativo" data-filtro="all">All</button>
+                        <button class="filtro" data-filtro="buttons">Buttons</button>
+                        <button class="filtro" data-filtro="checkboxes">Checkboxes</button>
+                        <button class="filtro" data-filtro="cards">Cards</button>
+                    </div>
+                    <div class="painelcoluna2">
+                        <button class="filtro" data-filtro="loaders">Loaders</button>
+                        <button class="filtro" data-filtro="forms">Forms</button>
+                        <button class="filtro" data-filtro="radio">Radio Buttons</button>
                     <button class="filtro" data-filtro="inputs">Inputs</button>
                 </div>
+            </div>
             </div>
             <div class="search-box" id="searchbox">
                 <input type="search" placeholder="Pesquisar Elementos...">
@@ -45,10 +47,49 @@
         </div>
     </header>
 
+    <!-- TEXTO CENTRAL DA PAGINA -->
     <div class="txt-central">
         <p class="txt-maior">A Maior Biblioteca de Interface de Usuário de Código Aberto</p>
         <p class="txt-menor">Códigos em CSS e HTML para usar em seus projetos.</p>
     </div>
+
+    <!-- CARDS DA TELA INICIAL -->
+     <section class="cards">
+        <div class="row row-1">
+            <article class="card"></article>
+            <article class="card">
+
+    <p>loading</p>
+    <div class="words">
+      <span class="word">buttons</span>
+      <span class="word">forms</span>
+      <span class="word">switches</span>
+      <span class="word">cards</span>
+      <span class="word">buttons</span>
+
+            </article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+        </div>
+        <div class="row row-2">
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+        </div>
+        <div class="row row-3">
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+            <article class="card"></article>
+        </div>
+     </section>
 
     <script src="./src/js/script.js"></script>
 </body>

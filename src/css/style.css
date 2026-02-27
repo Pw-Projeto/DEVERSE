@@ -6,10 +6,12 @@
 :root {
     --bg : #060706;
     --hover : #333;
+    --bg-card : #111;
 }
 
 body {
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 #cabecalho {
@@ -17,6 +19,37 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* LOGO ANIMADA */
+.botao-logo {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37FF8B;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+    position: relative;
+    letter-spacing: 3px;
+}
+
+.texto-botao-hover {
+    position: absolute;
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: 6px solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.botao-logo:hover .texto-botao-hover {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
 /* BOTAO FILTRO */
@@ -40,8 +73,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 70px;
-    right: 165px;
+    top: 60px;
+    right: 125px;
     padding: 5px;
     border-radius: 10px;
     border: solid #333 3px;
@@ -68,7 +101,7 @@ body {
 
 .filtro {
     margin: 3px;
-    padding: 10px 20px 10px 20px;
+    padding: 12px 30px 12px 30px;
     background: transparent;
     width: 100%;
     color: #fff;
@@ -110,53 +143,25 @@ body {
     background: #22c55e;
     border: none;
     color: #fff;
-    padding: 14px 20px;
+    padding: 12px 18px;
     border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
+    margin-right: 2px;
 }
 
 .search-box button:hover {
     background-color: #16a34a;
 }
 
-/* LOGO ANIMADA */
-.botao-logo {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    --text-stroke-color: rgba(255, 255, 255, 0.6);
-    --animation-color: #37FF8B;
-    font-size: 2em;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-    position: relative;
-    letter-spacing: 3px;
-}
 
-.texto-botao-hover {
-    position: absolute;
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: 6px solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color);
-}
-
-.botao-logo:hover .texto-botao-hover {
-    width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color));
-}
-
+/* TEXTO CENTRAL DA PAGINA */
 .txt-central {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
+    margin: 120px 0 60px 0;
 }
 
 .txt-maior {
@@ -173,4 +178,33 @@ body {
     color: #9b9b9b;
     width: 160px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CARDS */
+.cards {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+.card {
+    width: 270px;
+    background: var(--bg-card);
+    height: 220px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.row-2 {
+    transform: translateX(-80px);
 }
