@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/style.css">
     <title>Deverse</title>
 </head>
+
 <body>
 
-<header id="cabecalho">
-<!-- LOGO -->
-    <div class="logo">
-        <button class="botao-logo" data-text="Deverse">
-            <span class="texto-botao-real">&nbsp;deverse&nbsp;</span>
-            <span aria-hidden="true" class="texto-botao-hover">&nbsp;deverse&nbsp;</span>
-        </button>
-    </div>
-<!-- FILTRO -->
-    <nav class="navbar">
-        <button id="btnfiltro" class="btn-filtro">Elementos</button>
-    </nav>
-    <!-- PAINEL OCULTO DO BOTAO DOS FILTROS -->
-    <div id="painelfiltro" class="painel-filtro">
-        <div class="painelcoluna1">
-            <button class="filtro ativo" data-filtro="all">All</button>
-            <button class="filtro" data-filtro="buttons">Buttons</button>
-            <button class="filtro" data-filtro="checkboxes">Checkboxes</button>
-            <button class="filtro" data-filtro="cards">Cards</button>
+    <header id="cabecalho">
+        <!-- LOGO -->
+        <div class="logo">
+            <button class="botao-logo" data-text="Deverse">
+                <span class="texto-botao-real">&nbsp;deverse&nbsp;</span>
+                <span aria-hidden="true" class="texto-botao-hover">&nbsp;deverse&nbsp;</span>
+            </button>
         </div>
-        <div class="painelcoluna2">
-            <button class="filtro" data-filtro="loaders">Loaders</button>
-            <button class="filtro" data-filtro="forms">Forms</button>
-            <button class="filtro" data-filtro="radio">Radio Buttons</button>
-            <button class="filtro" data-filtro="inputs">Inputs</button>
+        <div class="nav-filtros">
+            <!-- FILTRO -->
+            <nav class="navbar">
+                <button id="btnfiltro" class="btn-filtro">Elementos</button>
+            </nav>
+            <!-- PAINEL OCULTO DO BOTAO DOS FILTROS -->
+            <div id="painelfiltro" class="painel-filtro">
+                <div class="painelcoluna1">
+                    <button class="filtro ativo" data-filtro="all">All</button>
+                    <button class="filtro" data-filtro="buttons">Buttons</button>
+                    <button class="filtro" data-filtro="checkboxes">Checkboxes</button>
+                    <button class="filtro" data-filtro="cards">Cards</button>
+                </div>
+                <div class="painelcoluna2">
+                    <button class="filtro" data-filtro="loaders">Loaders</button>
+                    <button class="filtro" data-filtro="forms">Forms</button>
+                    <button class="filtro" data-filtro="radio">Radio Buttons</button>
+                    <button class="filtro" data-filtro="inputs">Inputs</button>
+                </div>
+            </div>
+            <div class="search-box" id="searchbox">
+                <input type="search" placeholder="Pesquisar Elementos...">
+                <button>Pesquisar</button>
+            </div>
         </div>
+    </header>
+
+    <div class="txt-central">
+        <p class="txt-maior">A Maior Biblioteca de Interface de Usuário de Código Aberto</p>
+        <p class="txt-menor">Códigos em CSS e HTML para usar em seus projetos.</p>
     </div>
-</header>
 
-<div class="txt-central">
-    <p class="txt-maior">A Maior Biblioteca de Interface de Usuário de Código Aberto</p>
-    <p class="txt-menor">Códigos em CSS e HTML para usar em seus projetos.</p>
-</div>
-
-<script src="./src/js/script.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
+
 </html>

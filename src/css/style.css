@@ -3,9 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --bg : #060706;
+    --hover : #333;
+}
 
 body {
-    background-color: #060706;
+    background-color: var(--bg);
 }
 
 #cabecalho {
@@ -24,10 +28,11 @@ body {
     padding: 10px;
     border-radius: 7px;
     transition: 0.1s ease-in-out;
+    margin-right: 15px;
 }
 
 .btn-filtro:hover{
-    background: #242424;
+    background: var(--hover);
 }
 /* PAINEL COM OS FILTROS */
 .painel-filtro{
@@ -35,8 +40,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 80px;
-    right: 30px;
+    top: 70px;
+    right: 165px;
     padding: 5px;
     border-radius: 10px;
     border: solid #333 3px;
@@ -72,7 +77,47 @@ body {
 }
 
 .filtro:hover {
-    background: #333;
+    background: var(--hover);
+}
+
+.nav-filtros{
+    display: flex;
+    align-items: center;
+}
+
+/* CAIXA DE TEXTO PARA FILTRO */
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0d1110;
+    width: 300px;
+    height: 45px;
+    border-radius: 15px;
+    border: solid #333 1px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.search-box button {
+    background: #22c55e;
+    border: none;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #16a34a;
 }
 
 /* LOGO ANIMADA */
