@@ -2,13 +2,13 @@
 const containerfilter = document.querySelector(".containerfilter");
 const painelfiltro = document.getElementById("painelfiltro");
 
-// QUANDO ACONTECER O EVENTO DE CLICAR NO BOTAO, VAI EXECUTAR A FUNCAO
+// QUANDO ACONTECER O EVENTO DE PASSAR O MOUSE POR CIMA, VAI EXECUTAR A FUNCAO
 containerfilter.addEventListener("mouseenter", function() {
-  // ESSA FUNCAO DIZ QUE SE TIVER A CLASSE ACTIVE, REMOVE E SE NAO TIVER COLOCA
+  // ADICIONA A FUNCAO ACTIVE
   painelfiltro.classList.add("active");
 });
-// QUANDO ACONTECER O EVENTO DE CLICAR EM QUALQUER LUGAR DA TELA, VAI EXECUTAR A FUNCAO
-containerfilter.addEventListener("mouseleave", function(event) {
+// QUANDO ACONTECER O EVENTO DE TIRAR O MOUSE DE CIMA, VAI EXECUTAR A FUNCAO
+containerfilter.addEventListener("mouseleave", function() {
     // REMOVE A CLASSE ACTIVE
     painelfiltro.classList.remove("active");
 });
