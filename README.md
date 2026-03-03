@@ -95,10 +95,6 @@ Utilizar a extensão Live Server no VS Code para melhor experiência de desenvol
 
 Alexsandro D dos Santos
 
-Nathan R Damasceno
-
-Levi M da Silveira
-
 Disciplina: Programação Web
 
 Instituição: Etec Professor Basilides de Godoy
