@@ -1250,3 +1250,31 @@ ul {
     font-size: x-small;
     margin-top: 10px;
 }
+/*Para uso nos textos normais*/
+.txt-padrao {
+   color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    margin: 30px;
+    p:first-letter {
+    margin-left: 3em;
+}
+}
+
+
+/* Para o footer ficar no final da página sempre e não dentro dos conteudos*/
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;            /* altura do rodapé */
+}
+
+.content-wrap{
+  padding-bottom: 10rem;    /* altura do rodapé */
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
