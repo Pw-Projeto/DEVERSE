@@ -1,0 +1,1066 @@
+.cards {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: max-content;
+}
+
+.card {
+  width: 270px;
+  background: var(--bg-card);
+  height: 220px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-2 {
+  transform: translateX(-80px);
+}
+
+/* ------------------- CARD 1 -------------------- */
+.card-1 .messageBox {
+  width: fit-content;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d2d2d;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: 1px solid rgb(63, 63, 63);
+}
+
+.card-1 .messageBox:focus-within {
+  border: 1px solid rgb(110, 110, 110);
+}
+
+.card-1 .fileUploadWrapper {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-1 #file {
+  display: none;
+}
+
+.card-1 .fileUploadWrapper label {
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-1 .fileUploadWrapper label svg {
+  height: 18px;
+}
+
+.card-1 .fileUploadWrapper label svg path {
+  transition: all 0.3s;
+}
+
+.card-1 .fileUploadWrapper label svg circle {
+  transition: all 0.3s;
+}
+
+.card-1 .fileUploadWrapper label:hover svg path {
+  stroke: #fff;
+}
+
+.card-1 .fileUploadWrapper label:hover svg circle {
+  stroke: #fff;
+  fill: #3c3c3c;
+}
+
+.card-1 .fileUploadWrapper label:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+.card-1 .tooltip {
+  position: absolute;
+  top: -40px;
+  display: none;
+  opacity: 0;
+  color: white;
+  font-size: 10px;
+  text-wrap: nowrap;
+  background-color: #000;
+  padding: 6px 10px;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
+  transition: all 0.3s;
+}
+
+.card-1 #messageInput {
+  width: 200px;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  color: white;
+}
+
+.card-1 #messageInput:focus ~ #sendButton svg path,
+.card-1 #messageInput:valid ~ #sendButton svg path {
+  fill: #3c3c3c;
+  stroke: white;
+}
+
+.card-1 #sendButton {
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-1 #sendButton svg {
+  height: 18px;
+  transition: all 0.3s;
+}
+
+.card-1 #sendButton svg path {
+  transition: all 0.3s;
+}
+
+.card-1 #sendButton:hover svg path {
+  fill: #3c3c3c;
+  stroke: white;
+}
+
+/* -------------------- CARD 2 -------------------- */
+.card-2 .card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #111;
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+.card-2 .loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.card-2 .words {
+  overflow: hidden;
+  position: relative;
+}
+.card-2 .words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.card-2 .word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #956afa;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+/* -------------------- CARD 3 -------------------- */
+.card-3 .animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: greenyellow;
+  box-shadow: 0 0 0 2px greenyellow;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3 .animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: greenyellow;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3 .animated-button .arr-1 {
+  right: 16px;
+}
+
+.card-3 .animated-button .arr-2 {
+  left: -25%;
+}
+
+.card-3 .animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3 .animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-3 .animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.card-3 .animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.card-3 .animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.card-3 .animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.card-3 .animated-button:hover svg {
+  fill: #212121;
+}
+
+.card-3 .animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px greenyellow;
+}
+
+.card-3 .animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+/* -------------------- CARD 4 -------------------- */
+.card-4 .radio-container {
+  --main-color: #f7e479;
+  --main-color-opacity: #f7e4791c;
+
+  /* change this according inputs count */
+  --total-radio: 3;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 0.5rem;
+}
+.card-4 .radio-container input {
+  cursor: pointer;
+  appearance: none;
+}
+.card-4 .radio-container .glider-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(27, 27, 27, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 1px;
+}
+.card-4 .radio-container .glider-container .glider {
+  position: relative;
+  height: calc(100% / var(--total-radio));
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    var(--main-color) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: transform 0.5s cubic-bezier(0.37, 1.95, 0.66, 0.56);
+}
+.card-4 .radio-container .glider-container .glider::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 300%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--main-color);
+  filter: blur(10px);
+}
+.card-4 .radio-container .glider-container .glider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(
+    90deg,
+    var(--main-color-opacity) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.card-4 .radio-container label {
+  cursor: pointer;
+  padding: 1rem;
+  position: relative;
+  color: grey;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-4 .radio-container input:checked + label {
+  color: var(--main-color);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(1):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(0);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(2):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(100%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(3):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(200%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(4):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(300%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(5):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(400%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(6):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(500%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(7):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(600%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(8):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(700%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(9):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(800%);
+}
+
+.card-4
+  .radio-container
+  input:nth-of-type(10):checked
+  ~ .glider-container
+  .glider {
+  transform: translateY(900%);
+}
+
+/* -------------------- CARD 5 -------------------- */
+.card-5 .clear {
+  clear: both;
+}
+
+.card-5 .checkBox {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.card-5 .checkBox div {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+}
+
+.card-5 .checkBox input[type="checkbox"]:checked + div {
+  left: -10px;
+  top: -10px;
+}
+
+.card-5 .checkBox input[type="checkbox"] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+
+.card-5 .transition {
+  transition: 300ms ease;
+}
+
+/* -------------------- CARD 8 -------------------- */
+.card-8 button {
+  --green: #1bfd9c;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
+  color: var(--green);
+  box-shadow:
+    inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+.card-8 button:hover {
+  color: #82ffc9;
+  box-shadow:
+    inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.card-8 button:before {
+  content: "";
+  position: absolute;
+  left: -4em;
+  width: 4em;
+  height: 100%;
+  top: 0;
+  transition: transform 0.4s ease-in-out;
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    rgba(27, 253, 156, 0.1) 40%,
+    rgba(27, 253, 156, 0.1) 60%,
+    transparent 100%
+  );
+}
+
+.card-8 button:hover:before {
+  transform: translateX(15em);
+}
+
+/* -------------------- CARD 9 -------------------- */
+.card-9 .wheel-and-hamster {
+  --dur: 1s;
+  position: relative;
+  width: 12em;
+  height: 12em;
+  font-size: 14px;
+}
+
+.card-9 .wheel,
+.card-9 .hamster,
+.card-9 .hamster div,
+.card-9 .spoke {
+  position: absolute;
+}
+
+.card-9 .wheel,
+.card-9 .spoke {
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-9 .wheel {
+  background: radial-gradient(
+    100% 100% at center,
+    hsla(0, 0%, 60%, 0) 47.8%,
+    hsl(0, 0%, 60%) 48%
+  );
+  z-index: 2;
+}
+
+.card-9 .hamster {
+  animation: hamster var(--dur) ease-in-out infinite;
+  top: 50%;
+  left: calc(50% - 3.5em);
+  width: 7em;
+  height: 3.75em;
+  transform: rotate(4deg) translate(-0.8em, 1.85em);
+  transform-origin: 50% 0;
+  z-index: 1;
+}
+
+.card-9 .hamster__head {
+  animation: hamsterHead var(--dur) ease-in-out infinite;
+  background: hsl(30, 90%, 55%);
+  border-radius: 70% 30% 0 100% / 40% 25% 25% 60%;
+  box-shadow:
+    0 -0.25em 0 hsl(30, 90%, 80%) inset,
+    0.75em -1.55em 0 hsl(30, 90%, 90%) inset;
+  top: 0;
+  left: -2em;
+  width: 2.75em;
+  height: 2.5em;
+  transform-origin: 100% 50%;
+}
+
+.card-9 .hamster__ear {
+  animation: hamsterEar var(--dur) ease-in-out infinite;
+  background: hsl(0, 90%, 85%);
+  border-radius: 50%;
+  box-shadow: -0.25em 0 hsl(30, 90%, 55%) inset;
+  top: -0.25em;
+  right: -0.25em;
+  width: 0.75em;
+  height: 0.75em;
+  transform-origin: 50% 75%;
+}
+
+.card-9 .hamster__eye {
+  animation: hamsterEye var(--dur) linear infinite;
+  background-color: hsl(0, 0%, 0%);
+  border-radius: 50%;
+  top: 0.375em;
+  left: 1.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+
+.card-9 .hamster__nose {
+  background: hsl(0, 90%, 75%);
+  border-radius: 35% 65% 85% 15% / 70% 50% 50% 30%;
+  top: 0.75em;
+  left: 0;
+  width: 0.2em;
+  height: 0.25em;
+}
+
+.card-9 .hamster__body {
+  animation: hamsterBody var(--dur) ease-in-out infinite;
+  background: hsl(30, 90%, 90%);
+  border-radius: 50% 30% 50% 30% / 15% 60% 40% 40%;
+  box-shadow:
+    0.1em 0.75em 0 hsl(30, 90%, 55%) inset,
+    0.15em -0.5em 0 hsl(30, 90%, 80%) inset;
+  top: 0.25em;
+  left: 2em;
+  width: 4.5em;
+  height: 3em;
+  transform-origin: 17% 50%;
+  transform-style: preserve-3d;
+}
+
+.card-9 .hamster__limb--fr,
+.card-9 .hamster__limb--fl {
+  clip-path: polygon(0 0, 100% 0, 70% 80%, 60% 100%, 0% 100%, 40% 80%);
+  top: 2em;
+  left: 0.5em;
+  width: 1em;
+  height: 1.5em;
+  transform-origin: 50% 0;
+}
+
+.card-9 .hamster__limb--fr {
+  animation: hamsterFRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30, 90%, 80%) 80%, hsl(0, 90%, 75%) 80%);
+  transform: rotate(15deg) translateZ(-1px);
+}
+
+.hamster__limb--fl {
+  animation: hamsterFLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30, 90%, 90%) 80%, hsl(0, 90%, 85%) 80%);
+  transform: rotate(15deg);
+}
+
+.card-9 .hamster__limb--br,
+.hamster__limb--bl {
+  border-radius: 0.75em 0.75em 0 0;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    70% 90%,
+    70% 100%,
+    30% 100%,
+    40% 90%,
+    0% 30%
+  );
+  top: 1em;
+  left: 2.8em;
+  width: 1.5em;
+  height: 2.5em;
+  transform-origin: 50% 30%;
+}
+
+.card-9 .hamster__limb--br {
+  animation: hamsterBRLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30, 90%, 80%) 90%, hsl(0, 90%, 75%) 90%);
+  transform: rotate(-25deg) translateZ(-1px);
+}
+
+.card-9 .hamster__limb--bl {
+  animation: hamsterBLLimb var(--dur) linear infinite;
+  background: linear-gradient(hsl(30, 90%, 90%) 90%, hsl(0, 90%, 85%) 90%);
+  transform: rotate(-25deg);
+}
+
+.card-9 .hamster__tail {
+  animation: hamsterTail var(--dur) linear infinite;
+  background: hsl(0, 90%, 85%);
+  border-radius: 0.25em 50% 50% 0.25em;
+  box-shadow: 0 -0.2em 0 hsl(0, 90%, 75%) inset;
+  top: 1.5em;
+  right: -0.5em;
+  width: 1em;
+  height: 0.5em;
+  transform: rotate(30deg) translateZ(-1px);
+  transform-origin: 0.25em 0.25em;
+}
+
+.card-9 .spoke {
+  animation: spoke var(--dur) linear infinite;
+  background:
+    radial-gradient(
+      100% 100% at center,
+      hsl(0, 0%, 60%) 4.8%,
+      hsla(0, 0%, 60%, 0) 5%
+    ),
+    linear-gradient(
+        hsla(0, 0%, 55%, 0) 46.9%,
+        hsl(0, 0%, 65%) 47% 52.9%,
+        hsla(0, 0%, 65%, 0) 53%
+      )
+      50% 50% / 99% 99% no-repeat;
+}
+
+/* -------------------- CARD 10 -------------------- */
+.card-10 .hamburger {
+  cursor: pointer;
+}
+
+.card-10 .hamburger input {
+  display: none;
+}
+
+.card-10 .hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-10 .line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-10 .line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.card-10 .hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.card-10 .hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* -------------------- CARD 11 -------------------- */
+.card-11 button {
+  --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+  --accent: fuchsia;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #212121;
+  cursor: pointer;
+  color: white;
+  padding: 1em 2em;
+  transition:
+    box-shadow ease-in-out 0.3s,
+    background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s,
+    transform ease-in-out 0.1s;
+  box-shadow:
+    13px 13px 10px #1c1c1c,
+    -13px -13px 10px #262626;
+}
+
+.card-11 button:hover {
+  box-shadow: var(--hover-shadows);
+}
+
+.card-11 button:active {
+  box-shadow:
+    var(--hover-shadows),
+    var(--accent) 0px 0px 30px 5px;
+  background-color: var(--accent);
+  transform: scale(0.95);
+}
+
+/* -------------------- CARD 12 -------------------- */
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: #0d1117;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.value {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  display: flex;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.value:not(:active):hover,
+.value:focus {
+  background-color: #21262c;
+}
+
+.value:focus,
+.value:active {
+  background-color: #1a1f24;
+  outline: none;
+}
+
+.value::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  width: 5px;
+  height: 80%;
+  background-color: #2f81f7;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.value:focus::before,
+.value:active::before {
+  opacity: 1;
+}
+
+.value svg {
+  width: 15px;
+}
+
+@keyframes hamster {
+  from,
+  to {
+    transform: rotate(4deg) translate(-0.8em, 1.85em);
+  }
+  50% {
+    transform: rotate(0) translate(-0.8em, 1.85em);
+  }
+}
+
+@keyframes hamsterHead {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(0);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes hamsterEye {
+  from,
+  90%,
+  to {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes hamsterEar {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(0);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes hamsterBody {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(0);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes hamsterFRLimb {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(50deg) translateZ(-1px);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(-30deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterFLLimb {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(-30deg);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(50deg);
+  }
+}
+
+@keyframes hamsterBRLimb {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(-60deg) translateZ(-1px);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(20deg) translateZ(-1px);
+  }
+}
+
+@keyframes hamsterBLLimb {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(20deg);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes hamsterTail {
+  from,
+  25%,
+  50%,
+  75%,
+  to {
+    transform: rotate(30deg) translateZ(-1px);
+  }
+  12.5%,
+  37.5%,
+  62.5%,
+  87.5% {
+    transform: rotate(10deg) translateZ(-1px);
+  }
+}
+
+@keyframes spoke {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
+
+ul {
+  list-style: none;
+}

@@ -83,7 +83,7 @@
   transition: 0.2s;
 }
 
-.painel-filtro.active {
+.painel-filtro.is-active {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
