@@ -130,6 +130,10 @@
   width: 200px;
 }
 
+.search-box:hover {
+  border: 1px solid #999;
+}
+
 .search-box button {
   background: #22c55e;
   border: none;

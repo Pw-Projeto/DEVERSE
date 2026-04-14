@@ -2,7 +2,7 @@
 @import './components/footer.css';
 @import './components/cards.css';
 @import './components/ui.css';
-
+@import './components/steps.css';
 
 * {
   margin: 0;
@@ -19,6 +19,8 @@
 body {
   background-color: var(--bg);
   overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
 ul {

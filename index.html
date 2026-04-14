@@ -15,9 +15,11 @@
         <header id="cabecalho">
           <!-- LOGO -->
           <div class="logo">
-            <button class="botao-logo">
-              <span class="texto-botao-real">deverse</span>
-              <span class="texto-botao-hover" aria-hidden="true">deverse</span>
+            <button class="botao-logo" data-text="Deverse">
+              <span class="texto-botao-real">&nbsp;deverse&nbsp;</span>
+              <span aria-hidden="true" class="texto-botao-hover"
+                >&nbsp;deverse&nbsp;</span
+              >
             </button>
           </div>
 
@@ -39,9 +41,7 @@
                 <div class="painel-coluna">
                   <button class="filtro" data-filtro="loaders">Loaders</button>
                   <button class="filtro" data-filtro="forms">Forms</button>
-                  <button class="filtro" data-filtro="radio">
-                    Radio
-                  </button>
+                  <button class="filtro" data-filtro="radio">Radio</button>
                   <button class="filtro" data-filtro="inputs">Inputs</button>
                 </div>
               </div>
@@ -67,7 +67,7 @@
 
         <!-- CARDS DA TELA INICIAL -->
         <section class="cards">
-          <div class="row row-1">
+          <div class="row row-1 mb-10 mt-10">
             <article class="card card-1">
               <div class="messageBox">
                 <div class="fileUploadWrapper">
@@ -323,12 +323,36 @@
           </div>
         </section>
       </div>
+
+      <section class="steps">
+        <div class="steps-container">
+          <div class="steps-cards">
+            <div class="step-card">
+              Procure o elemento ideal para seu projeto.
+            </div>
+            <div class="step-card">Copie seu código em HTML e CSS.</div>
+            <div class="step-card">Cole o código no seu projeto e pronto!</div>
+          </div>
+
+          <div class="steps-line">
+            <div class="step step-1">
+              <span>1</span>
+            </div>
+            <div class="step step-2">
+              <span>2</span>
+            </div>
+            <div class="step step-3">
+              <span>3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- RODAPE DA PAGINA -->
       <footer id="footer">
         <div class="container-footer">
           <div class="logo-contatos">
             <div class="logo">
-              <!-- REMOVIDO DIV DUPLICADA -->
               <button class="botao-logo" data-text="Deverse">
                 <span class="texto-botao-real">&nbsp;deverse&nbsp;</span>
                 <span aria-hidden="true" class="texto-botao-hover"
@@ -395,8 +419,6 @@
           <div class="info-creditos">
             <div class="informacoes">
               <p class="title-link">Informações</p>
-
-              <!-- REMOVEI <p> DENTRO DO <a> -->
               <a href="./src/pages/sobreProjeto.html" class="footer-link"
                 >Sobre o Projeto</a
               >
@@ -405,7 +427,6 @@
 
             <div class="creditos-tecnicos">
               <p class="title-link">Créditos Técnicos</p>
-
               <a href="" class="footer-link">Tecnologias utilizadas</a>
               <a href="" class="footer-link">Inspiração visual</a>
             </div>
