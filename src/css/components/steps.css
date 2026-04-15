@@ -1,11 +1,8 @@
-.steps {
-  margin: 150px 40px;
+.box-conteudo {
+  margin: 150px auto 0;
   border: solid 1px #333;
   width: 40%;
   border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .steps-container {
@@ -65,4 +62,11 @@
   border-radius: 50%;
   border: 1px solid #666;
   background: #0d0d0d;
+}
+
+@media (max-width >= 700px){
+  .steps {
+    margin-right: 25px;
+    width: 90%;
+  }
 }
