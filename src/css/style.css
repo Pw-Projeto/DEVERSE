@@ -21,6 +21,53 @@ body {
     align-items: center;
 }
 
+.txt-padrao {
+    background-color: #000000; /* verde */
+    border: 3px solid rgb(45, 170, 86); /* contorno preto */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* cantos arredondados */
+    color: rgb(46, 46, 46); /* cor do texto */
+}
+
+.txt-padrao h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: rgb(116, 111, 111);
+}
+
+.txt-padrao p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: rgb(116, 111, 111);
+}
+
+/* -------------------- IMAGENS COLABORADORES -------------------- */
+
+.equipe {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.membro {
+    text-align: center;
+}
+
+.membro img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.membro p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 /* -------------------- LOGO ANIMADA -------------------- */
 .botao-logo {
     background: transparent;
