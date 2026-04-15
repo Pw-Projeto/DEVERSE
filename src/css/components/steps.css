@@ -3,6 +3,9 @@
   border: solid 1px #333;
   width: 40%;
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .steps-container {

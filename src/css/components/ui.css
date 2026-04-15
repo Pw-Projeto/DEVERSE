@@ -47,6 +47,25 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.txt-padrao {
+    border: 2px solid rgb(0, 97, 16); /* contorno preto */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px; /* cantos arredondados */
+    color: #fff; /* cor do texto */
+}
+
+.txt-padrao h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.txt-padrao p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
 /* ==================== INPUTS ==================== */
 
 /* Base de input */
