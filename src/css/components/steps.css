@@ -1,7 +1,9 @@
 .steps {
-  margin: 150px 40px;
+  margin: 150px auto;
   border: solid 1px #333;
   width: 40%;
+  max-width: 900px;
+  min-width: 300px;
   border-radius: 15px;
 }
 

@@ -9,10 +9,9 @@
 .row {
   display: flex;
   gap: 10px;
-  width: max-content;
+  flex-wrap: wrap; 
+  justify-content: center;
   position: relative;
-  width: max-content;
-  overflow: visible;
 }
 
 .row-2::before {
@@ -1082,4 +1081,78 @@
 
 ul {
   list-style: none;
+}
+
+/* ------------------- Responsividade -------------------- */
+
+
+
+/* CARD BASE */
+.card {
+  width: 270px;
+  max-width: 270px;
+  height: 220px;
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 1024px) {
+  .row {
+    flex-wrap: wrap; /* começa a quebrar aqui */
+  }
+
+  .card {
+    max-width: 220px;
+    height: auto;
+  }
+}
+
+/* ---------------- CELULAR ---------------- */
+@media (max-width: 768px) {
+  .cards {
+    padding: 10px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .row-2 {
+    transform: none; /* remove bug lateral */
+  }
+
+  .card-1 .messageBox,
+  .card-1 #messageInput {
+    width: 100%;
+  }
+
+  .card-3 .animated-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---------------- CELULAR PEQUENO ---------------- */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .card-8 button {
+    width: 100%;
+  }
+
+  .card-9 .wheel-and-hamster {
+    width: 8em;
+    height: 8em;
+  }
+
+  .card-10 .hamburger svg {
+    height: 2em;
+  }
 }

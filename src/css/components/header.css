@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+
+  max-width: 1200px;  
+  margin: 0 auto;     
+  width: 100%;
 }
 
 /* -------------------- LOGO -------------------- */
@@ -145,4 +149,33 @@
 
 .search-box button:hover {
   background: #16a34a;
+}
+
+/* ---------------- RESPONSIVO HEADER ---------------- */
+
+@media (max-width: 768px) {
+  #cabecalho {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .painel-filtro {
+    right: auto;
+    left: 0; /* evita cortar na tela */
+  }
 }
